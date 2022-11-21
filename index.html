@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpookyShop</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
+</head>
+
+<body>
+    <a href="#hero-container" class="up-btn">
+        <i class="fa-solid fa-up-long"></i>
+    </a>
+    <section class="hero-section section" id="hero-container">
+        <div class="login" id="login">
+            <span class="user-tab u-register">
+                <i class="fa-solid fa-user-plus"></i>
+                <a href="register.html">
+                    Register
+                </a>
+            </span>
+            <span>
+                |
+            </span>
+            <span class="user-tab u-login">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <a href="login.html">
+                    Login
+                </a>
+            </span>
+            <span class="cart">
+                <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            </span>
+        </div>
+        <div class="hero-section--container section-container">
+            <header>
+                <div class="title-container">
+                    <span class="title">
+                        SpookyShop
+                    </span>
+                    <i class="fa-solid fa-ghost" id="ghost-icon" title="Don't click me"></i>
+                </div>
+                <div class="nav-container">
+                    <nav>
+                        <ul>
+                            <li><a href="#hero-container">Home</a></li>
+                            <li><a href="#collection">Collections</a></li>
+                            <li><a href="#aboutus">About us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <div class="main-body">
+                    <div class="main-title">
+                        <h1>Halloween</h1>
+                        <span>Sale</span>
+                        <p>This is a real treat, no tricks! Don’t let another October go by without letting your spooky
+                            true self out!</p>
+                    </div>
+                    <a href="#collection" class="main-shop--btn">
+                        Go to the shop
+                    </a>
+
+                </div>
+            </main>
+        </div>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <img src="assets/img/main-ghost.png" alt="smiling ghost" draggable="false" class="main-ghost">
+        <div class="spider normalanimation" id="spider">
+            <div class="spiderweb"></div>
+            <div class="spider-body" id="spider-body">
+                <div class="eyes left">
+                    <div class="eye"></div>
+                </div>
+                <div class="eyes right">
+                    <div class="eye"></div>
+                </div>
+            </div>
+            <div class="legs legs-left">
+                <div class="leg"></div>
+                <div class="leg"></div>
+                <div class="leg leg-left"></div>
+            </div>
+            <div class="legs legs-right">
+                <div class="leg"></div>
+                <div class="leg"></div>
+                <div class="leg leg-right"></div>
+            </div>
+        </div>
+    </section>
+    <section class="collection-section section" id="collection">
+        <div class="collection-section--container section-container">
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div class="card-body">
+                        <h2>Free shipping!</h2>
+                        <p>We offer free shiping
+                            all over the world</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-tag"></i>
+                    <div class="card-body">
+                        <h2>Exclusive merch!</h2>
+                        <p>Our designs are unique and premium quality</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <div class="card-body">
+                        <h2>Free return!</h2>
+                        <p>If you don't like it, you can change it</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="collection-title">Collections</h2>
+            <div class="collection-card-container">
+                <div class="collection-card">
+                    <div class="collection-card-body">
+                        <h2>Shirts</h2>
+                        <button id="shirts-shop-btn">Buy</button>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-card-body">
+                        <h2>Hoodies</h2>
+                        <button id="hoodies-shop-btn">Comming soon!</button>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-card-body">
+                        <h2>Mugs</h2>
+                        <button id="mugs-shop-btn">Comming soon!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collection-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="aboutus-section section" id="aboutus">
+        <div class="aboutus-section--container section-container">
+            <h2>About us</h2>
+            <h3>Our story</h3>
+            <p>
+                This brand is a result from the love that we all have for spooky things. We always wanted to do
+                something about it but couldn’t figure out what, until someone said "hey, what about a shop with
+                collectible things, such as mugs and clothing". That was it, we started planning this amazing dream of
+                ours then and we never stopped. Today we are proud to say we have incredible products and carefully
+                selected items that other horror lovers can take home too!
+                We couldn’t have done it without the support from all of you, so from the bottom of our hearts,
+                <span>thank you!</span> <i class="fa-solid fa-heart"></i>
+            </p>
+            <img src="assets/img/pink-ghost.png" alt="happy ghost" class="pink-ghost" draggable="false">
+        </div>
+        <div class="about-us-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="contact-section section" id="contact">
+        <div class="contact-section--container section-container">
+            <h2>Contact</h2>
+            <h3>Get in touch!</h3>
+            <form id="form">
+                <label for="name">
+                    <input type="text" id="name" placeholder="Enter your name">
+                </label>
+                <label for="email">
+                    <input type="email" id="email" placeholder="Enter a valid email adress">
+                </label>
+                <label for="textarea">
+                    <textarea placeholder="Enter your message"></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <h4>Follow us!</h4>
+                <div class="footer-network">
+                    <div class="ig-gradient">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </div>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                </div>
+                <div class="newsletter">
+                    <p>Wanna join our spooky community? Subscribe to our newsletter!</p>
+                    <label for="newsletter-email">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email">
+                    </label>
+                    <button type="submit">Subscribe</button>
+                </div>
+
+                <div class="footer-contact">
+                    <div class="footer-contact-network">
+                        <a href="https://www.linkedin.com/in/luca-cuello41/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/LucaCuello" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                    <span>Designed and developed
+                        <span>by Luca</span></span>
+                </div>
+            </div>
+            <div class="footer-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/extras.js"></script>
+</body>
+
+</html>

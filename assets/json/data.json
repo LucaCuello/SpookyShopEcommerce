@@ -1,0 +1,196 @@
+[
+{
+    "title": "Ghost",
+    "color": "Black",
+    "type" : "Sale",
+    "price": 19.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/ghostblack.png"
+}, 
+{
+    "title": "Ghost",
+    "color": "Orange",
+    "type" : "Sale",
+    "price": 19.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/ghostorange.png"
+},
+{
+    "title": "Ghost",
+    "color": "Pink",
+    "type" : "Sale",
+    "price": 19.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/ghostpink.png"
+},
+{
+    "title": "Monster",
+    "color": "Black",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/monsterblack.png"
+},
+{
+    "title": "Monster",
+    "color": "Orange",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/monsterorange.png"
+},
+{
+    "title": "Monster",
+    "color": "Pink",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/monsterpink.png"
+}, 
+{
+    "title": "Pink ghost",
+    "color": "Black",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/pinkghostblack.png"
+},
+{
+    "title": "Pink ghost",
+    "color": "Orange",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/pinkghostorange.png"
+},
+{
+    "title": "Pink ghost",
+    "color": "Pink",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/pinkghostpink.png"
+},
+{
+    "title": "Pumpkin",
+    "color": "Black",
+    "type" : "Sale",
+    "price": 19.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/pumpkinblack.png"
+},
+{
+    "title": "Pumpkin",
+    "color": "Orange",
+    "type" : "Sale",
+    "price": 19.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/pumpkinorange.png"
+},
+{
+    "title": "Pumpkin",
+    "color": "Pink",
+    "type" : "Sale",
+    "price": 19.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/pumpkinpink.png"
+},
+{
+    "title": "Spider",
+    "color": "Black",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/spiderblack.png"
+},
+{
+    "title": "Spider",
+    "color": "Orange",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/spiderorange.png"
+},
+{
+    "title": "Spider",
+    "color": "Pink",
+    "type" : "New",
+    "price": 29.99,
+    "sizes": [
+        "small",
+        "medium",
+        "large",
+        "extralarge"
+    ],
+    "image" : "assets/img/products/spiderpink.png"
+}]

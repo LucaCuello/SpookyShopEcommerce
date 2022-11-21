@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | SpookyShop</title>
+    <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/register.css">
+    <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="register-container">
+        <div class="ghost-section">
+            <img src="assets/img/main-ghost.png" alt="cute ghost looking at you" class="register-ghost" draggable="false">
+            <span class="home">
+                <i class="fa-solid fa-arrow-left"></i>
+                <a href="index.html" id="home-link">
+                    Home
+                </a>
+            </span>
+            <span class="title">
+                Be scary with us! 
+                <i class="fa-solid fa-ghost"></i>
+            </span>
+        </div>
+        <div class="register-section">
+            <div class="register-title">
+                <h2>Create a new account</h2>
+                <p>We have a 10% discount for registered users!</p>
+                <p>Complete the form below to create your account.</p>
+            </div>
+            <form id="form">
+                <label for="username"> Username
+                    <input type="text" name="username" id="username" class="input">
+                </label>
+                <label for="email"> Email
+                    <input type="email" name="email" id="email" class="input">
+                </label>
+                <label for="password"> Password
+                    <input type="password" name="password" id="password" autocomplete="on" class="input">
+                </label>
+                <label for="confirm-password"> Confirm your password
+                    <input type="password" name="confirm-password" id="confirm-password" autocomplete="on" class="input">
+                </label>
+                    <button type="submit" id="register">Register</button>
+                    <span id="sign-in">
+                        <a href="login.html">
+                            Already have an account? Sign in!
+                        </a>
+                    </span>
+                    <div class="msgs">
+                        <span id="username-msg"></span>
+                        <span id="email-msg"></span>
+                        <span id="password-msg"></span>
+                        <span id="confirm-password-msg"></span>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/validation.js"></script>
+</body>
+</html>

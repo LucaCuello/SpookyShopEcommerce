@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | SpookyShop</title>
+    <link rel="stylesheet" href="assets/css/shop.css" />
+    <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="shop-section section">
+        <div class="login" id="login">
+            <span class="user-tab u-register">
+                <i class="fa-solid fa-user-plus"></i>
+                <a href="register.html"> Register </a>
+            </span>
+            <span> | </span>
+            <span class="user-tab u-login">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <a href="login.html"> Login </a>
+            </span>
+            <span class="cart">
+                <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            </span>
+        </div>
+        <header>
+            <div class="title-container">
+                <span class="title"> SpookyShop </span>
+                <i class="fa-solid fa-ghost" title="Don't click me"></i>
+            </div>
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#collection">Collections</a></li>
+                        <li><a href="index.html#aboutus">About us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="banner">
+            <div class="banner-body">
+                <h2>Shirts</h2>
+                <p>Take a look at all the different designs we have!</p>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="shop-filters">
+                <h3>Filters</h3>
+
+
+                <div class="color-filter dropdown-closed">
+                    <h4><i class="fa-solid fa-caret-down"></i>By color</h4>
+                    <form>
+                        <label for="orange-cb">
+                            <input type="radio" id="orange-cb" name="color-radio">
+                            Orange
+                        </label>
+                        <label for="black-cb">
+                            <input type="radio" id="black-cb" name="color-radio">
+                            Black
+                        </label>
+                        <label for="pink-cb">
+                            <input type="radio" id="pink-cb" name="color-radio">
+                            Pink
+                        </label>
+                    </form>
+                </div>
+
+                <div class="genre-filter dropdown-closed">
+                    <h4><i class="fa-solid fa-caret-down"></i>By type</h4>
+                    <form>
+                        <label for="discount-cb">
+                            <input type="radio" id="discount-cb" name="genre-radio">
+                            On discount
+                        </label>
+                        <label for="new-cb">
+                            <input type="radio" id="new-cb" name="genre-radio">
+                            New collection
+                        </label>
+                    </form>
+                </div>
+
+            </div>
+            <div class="shop-products">
+            </div>
+        </div>
+        <div class="msg">
+        </div>
+        <script src="assets/js/shop.js">
+
+        </script>
+</body>
+
+</html>

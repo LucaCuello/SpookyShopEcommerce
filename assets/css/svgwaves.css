@@ -1,0 +1,89 @@
+/* Hero section wave */
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(220% + 1.3px);
+    height: 365px;
+}
+
+.wave .shape-fill {
+    fill: var(--spooky--black);
+}
+
+/* Collection wave  */
+
+.collection-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.collection-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 115px;
+}
+
+.collection-wave .shape-fill {
+    fill: var(--light-pink);
+}
+
+/* About us wave */
+
+.about-us-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.about-us-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 54px;
+}
+
+.about-us-wave .shape-fill {
+    fill: var(--spooky--black);
+}
+
+/* Footer wave */
+
+.footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 88px;
+}
+
+.footer-wave .shape-fill {
+    fill: #181B3B;
+}

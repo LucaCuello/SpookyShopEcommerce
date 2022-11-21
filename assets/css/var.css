@@ -1,0 +1,14 @@
+:root {
+    --main--orange: #FFBD59;
+    --dark--orange: #df921e;
+    --spooky--black: #181B3B;
+    --light-spooky--black: #181b3bb6;
+    --light-pink: #f0d9e0;
+    --ghostly--white: #EBEAEC;
+    --secondary--white: #b5b2b9;
+    --pure--white: #FFFFFF;
+    --title: 100px;
+    --subtitle: 60px;
+    --medium: 40px;
+    --normal-text: 25px;
+}
