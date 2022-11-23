@@ -1,0 +1,36 @@
+@media screen and (max-width: 1250px) {
+    .spider {
+        display: none;
+    }
+
+    .collection-card-container {
+        padding: 0 20px;
+    }
+
+    .pink-ghost {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .login,
+    .nav-container {
+        display: none;
+    }
+
+    .hamburger-popup {
+        display: flex;
+    }
+
+    header {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hamburger,
+    #mobile-cart {
+        display: block;
+    }
+}

@@ -1,0 +1,100 @@
+.hamburger {
+    cursor: pointer;
+    z-index: 20;
+}
+
+.hamburger div {
+    pointer-events: none;
+    height: 4px;
+    border-radius: 10px;
+    width: 25px;
+    margin: 4px auto;
+    background-color: var(--spooky--black);
+    background-color: var(--ghostly--white);
+    transition: all 350ms ease-in-out;
+}
+
+.hamburger-active div:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger-active div:nth-of-type(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-active div:nth-of-type(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.hamburger-popup {
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    font-size: var(--normal-text);
+    background-color: var(--spooky--black);
+    height: calc(100% - 64px);
+    width: 50%;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 20;
+    padding: 20px 0 0 20px;
+    border-top-right-radius: 50px;
+    top: 64px;
+    transition: all 600ms ease-in-out;
+}
+
+.popup-active {
+    transform: translateX(0);
+    transition: all 600ms ease-in-out;
+}
+
+.hamburger-popup nav,
+.hamburger-popup nav ul,
+.hamburger-popup nav ul li {
+    width: max-content;
+}
+
+.hamburger-popup nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 60px;
+}
+
+.hamburger-popup nav ul li {
+    transition: all 200ms ease-in-out;
+}
+
+.hamburger-popup nav ul li a {
+    color: var(--ghostly--white);
+    transition: all 200ms ease-in-out;
+}
+
+.hamburger-popup nav:nth-of-type(2) ul {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.hamburger-popup nav ul li:hover, .hamburger-popup nav ul li:hover a {
+    transform: scale(1.08);
+    color: var(--main--orange);
+    transition: all 200ms ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    z-index: -10;
+    transition: all 300ms ease-in-out;
+}
+
+.overlay-active {
+    z-index: 15;
+    opacity: 1;
+}

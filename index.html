@@ -7,14 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpookyShop</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive-main.css">
     <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Up button -->
     <a href="#hero-container" class="up-btn">
         <i class="fa-solid fa-up-long"></i>
     </a>
+    <!-- Hamburger popup -->
+    <div class="hamburger-popup">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#collection">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Collections
+                    </a>
+                </li>
+                <li>
+                    <a href="#aboutus">
+                        <i class="fa-solid fa-angle-right"></i>
+                        About us
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="register.html">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Register
+                    </a></li>
+                <li><a href="login.html">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        Login
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Hamburger popup -->
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- overlay -->
     <section class="hero-section section" id="hero-container">
         <div class="login" id="login">
             <span class="user-tab u-register">
@@ -38,6 +81,13 @@
         </div>
         <div class="hero-section--container section-container">
             <header>
+                <!-- Hamburger menu -->
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <!-- Hamburger menu -->
                 <div class="title-container">
                     <span class="title">
                         SpookyShop
@@ -54,6 +104,9 @@
                         </ul>
                     </nav>
                 </div>
+                <!-- Cellphone cart -->
+                <i class="fa-solid fa-cart-shopping mobile-cart" id="mobile-cart"></i>
+                <!-- Cellphone cart -->
             </header>
             <main>
                 <div class="main-body">
@@ -241,6 +294,7 @@
 
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/hamburger.js"></script>
     <script src="assets/js/extras.js"></script>
 </body>
 

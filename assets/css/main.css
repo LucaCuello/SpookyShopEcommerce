@@ -3,8 +3,10 @@
 @import url("animations.css");
 @import url("extras.css");
 @import url("svgwaves.css");
+@import url("hamburger.css");
 
 body {
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -758,5 +760,18 @@ footer {
 }
 
 .footer-contact span:nth-child(1) {
+    color: var(--ghostly--white);
+}
+
+/* Responsive HTML elements */
+
+#mobile-cart,
+.hamburger {
+    display: none;
+}
+
+.mobile-cart {
+    cursor: pointer;
+    font-size: 30px;
     color: var(--ghostly--white);
 }

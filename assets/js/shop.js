@@ -80,6 +80,8 @@ const renderCard = (products) => {
   `;
 };
 
+// Cart
+
 const renderMsg = (valid = false, msg = "") => {
   let message = document.querySelector(".msg");
   if (!valid) {
@@ -103,33 +105,58 @@ const renderMsg = (valid = false, msg = "") => {
   }
 };
 
-const getCartData = () => {
-  document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("products-cart")) {
-      let order = e.target.dataset,
-        size = e.target.parentElement.children[3].children[0].value;
-      if (size === "Choose a size") {
-        renderMsg(false, "Please, select a size");
-      } else {
-        let orderInfo = {
-          title: order.name,
-          price: order.price,
-          image: order.image,
-          size: size,
-        };
-        renderMsg(
-          true,
-          `${order.name} (${order.color}) has been added to your cart`
-        );
-      }
-    } else return;
-  });
+// const saveToLocalStorage = (objectInfo) => {
+//   console.log(localStorageCart);
+//   console.log(objectInfo);
+//   localStorage.setItem("Cart", JSON.stringify(objectInfo));
+// };
+
+// const getCartData = () => {
+//   document.addEventListener("click", (e) => {
+//     if (e.target.classList.contains("products-cart")) {
+//       let order = e.target.dataset,
+//         size = e.target.parentElement.children[3].children[0].value;
+//       if (size === "Choose a size") {
+//         renderMsg(false, "Please, select a size");
+//       } else {
+//         renderMsg(
+//           true,
+//           `${order.name} (${order.color}) has been added to your cart`
+//         );
+//         let orderInfo = [
+//           ...localStorageCart,
+//           {
+//             id: localStorageCart.length + 1,
+//             title: order.name,
+//             price: order.price,
+//             image: order.image,
+//             size: size,
+//           },
+//         ];
+//       }
+//     } else return;
+//   });
+// };
+
+let localStorageCart = JSON.parse(localStorage.getItem("Cart")) || [];
+
+const createOrderData = (name, price, image, color) => {
+  return { name, price, image, color };
+};
+
+const addToCart = (e) => {
+  if (!e.target.classList.contains("products-cart")) return;
+  const { name, price, image, color } = e.target.dataset;
+  const product = createOrderData(name, price, image, color);
+  let arraytest = [...localStorageCart, product];
+  localStorage.setItem("Cart", JSON.stringify(arraytest));
 };
 
 const init = () => {
   filterDropdowns();
   fetchproducts();
-  getCartData();
+  productsContainer.addEventListener("click", addToCart);
+  // getCartData();
 };
 
 init();
