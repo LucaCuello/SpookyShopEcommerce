@@ -111,7 +111,8 @@
 
 .pink-ghost {
     position: absolute;
-    width: 30%;
+    width: 500px;
+    height: auto;
     bottom: -120px;
     filter: drop-shadow(-10px 23px 15px #181b3b4b);
 }

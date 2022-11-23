@@ -1,14 +1,15 @@
 @media screen and (max-width: 1250px) {
+
     .spider {
         display: none;
     }
 
-    .collection-card-container {
-        padding: 0 20px;
+    .main-ghost {
+        display: none;
     }
 
-    .pink-ghost {
-        width: 40%;
+    .collection-card-container {
+        padding: 20px;
     }
 }
 
@@ -32,5 +33,133 @@
     .hamburger,
     #mobile-cart {
         display: block;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .collection-section--container {
+        height: auto;
+    }
+
+    .cards-container {
+        flex-wrap: wrap;
+        /* gap: 20px; */
+    }
+
+    .pink-ghost {
+        width: 450px;
+    }
+
+    .aboutus-section--container p {
+        margin: 20px 20px 450px 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --haloween-title-size: 90px;
+        --haloween-title-size-bottom: 200px;
+        --title: 80px;
+        --subtitle: 40px;
+        --normal-text: 20px;
+    }
+
+    .hamburger-popup {
+        width: 80%;
+    }
+
+    main {
+        margin-top: 25%;
+    }
+
+    .main-title span {
+        bottom: 70px;
+    }
+
+    .main-title p {
+        margin-top: -130px;
+        max-width: 400px;
+    }
+
+    .main-body a {
+        padding: 15px 80px;
+        font-size: 20px;
+    }
+
+    .pink-ghost {
+        width: 300px;
+        bottom: -50px;
+    }
+
+    .aboutus-section--container p {
+        margin: 20px 20px 300px 20px;
+    }
+
+    .footer-container {
+        width: 85%;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --haloween-title-size: 90px;
+        --haloween-title-size-bottom: 200px;
+        --title: 60px;
+        --subtitle: 30px;
+        --medium: 30px;
+        --normal-text: 18px;
+    }
+
+    .fa-ghost {
+        left: 98px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .title-container {
+        display: none;
+    }
+
+    .mobile-icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --haloween-title-size: 70px;
+        --haloween-title-size-bottom: 130px;
+        --title: 50px;
+        --subtitle: 25px;
+        --medium: 20px;
+        --normal-text: 18px;
+    }
+
+    .main-title span {
+        bottom: 50px;
+    }
+
+    .main-title p {
+        margin-top: -90px;
+        max-width: 320px;
+    }
+
+    .main-body a {
+        padding: 15px 40px;
+    }
+
+    .collection-card {
+        flex: 0 0 270px;
+    }
+
+
+    #hoodies-shop-btn, #mugs-shop-btn {
+        width: 65%;
     }
 }
