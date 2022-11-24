@@ -1,0 +1,57 @@
+@media screen and (max-width: 1000px) {
+    .title {
+        padding-right: 20px;
+    }
+
+    .register-title {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .register-container {
+        flex-direction: column;
+        border-radius: unset;
+        height: 100%;
+        width: 100%;
+    }
+
+    .ghost-section,
+    .register-section {
+        width: 100%;
+    }
+
+    .register-ghost {
+        width: 100px;
+        height: auto;
+        bottom: 20px;
+    }
+
+    .ghost-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 320px;
+    }
+
+    .register-container {
+        height: unset;
+        min-width: unset;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .register-title h2 {
+        padding-top: 20px;
+    }
+
+    #sign-in {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .register-ghost {
+        display: none;
+    }
+}

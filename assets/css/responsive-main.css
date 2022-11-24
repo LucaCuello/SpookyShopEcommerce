@@ -27,7 +27,7 @@
     header {
         width: 100%;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .hamburger,
@@ -122,6 +122,10 @@
 }
 
 @media screen and (max-width: 425px) {
+    header {
+        justify-content: space-around;
+    }
+
     .title-container {
         display: none;
     }
