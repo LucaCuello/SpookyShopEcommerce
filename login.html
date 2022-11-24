@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,15 @@
     <title>Login | SpookyShop</title>
     <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/responsive-login-register.css">
     <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="register-container login-container">
         <div class="ghost-section">
-            <img src="assets/img/secondary-ghost.png" alt="cute ghost looking at you" class="register-ghost" draggable="false">
+            <img src="assets/img/secondary-ghost.png" alt="cute ghost looking at you" class="register-ghost"
+                draggable="false">
             <span class="home">
                 <i class="fa-solid fa-arrow-left"></i>
                 <a href="index.html" id="home-link">
@@ -20,8 +24,8 @@
                 </a>
             </span>
             <span class="title">
-                Welcome back! 
-                <i class="fa-solid fa-ghost"></i>
+                Welcome back!
+                <i class="fa-solid fa-ghost" id="login-register-ghost"></i>
             </span>
         </div>
         <div class="register-section login-section">
@@ -37,19 +41,20 @@
                 <label for="password"> Password
                     <input type="password" name="password" id="password-login" class="input" autocomplete="on">
                 </label>
-                    <button type="submit" id="login">Log in</button>
-                    <span id="sign-in">
-                        <a href="register.html">
-                            Don't have an account? Create one!
-                        </a>
-                    </span>
-                    <div class="msgs">
-                        <span id="invalid-user-msg"></span>
-                        <span id="password-msg"></span>
-                    </div>
+                <button type="submit" id="login">Log in</button>
+                <span id="sign-in">
+                    <a href="register.html">
+                        Don't have an account? Create one!
+                    </a>
+                </span>
+                <div class="msgs">
+                    <span id="invalid-user-msg"></span>
+                    <span id="password-msg"></span>
+                </div>
             </form>
         </div>
     </div>
     <script src="assets/js/login.js"></script>
 </body>
+
 </html>

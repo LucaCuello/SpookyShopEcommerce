@@ -9,11 +9,38 @@
 }
 
 @media screen and (max-width: 730px) {
+    .title i {
+        display: none;
+    }
+
+    .title {
+        position: static;
+        padding-top: 60px;
+        padding-right: 0;
+    }
+
     .register-container {
         flex-direction: column;
         border-radius: unset;
         height: 100%;
         width: 100%;
+    }
+
+    @keyframes ghost-floating {
+        0% {
+            transform: translateY(-8px);
+            filter: drop-shadow(-3px 10px 10px rgba(0, 0, 0, 0.281));
+        }
+
+        50% {
+            transform: translateY(8px);
+            filter: drop-shadow(-3px 10px 18px rgba(0, 0, 0, 0.575));
+        }
+
+        100% {
+            transform: translateY(-8px);
+            filter: drop-shadow(-3px 10px 10px rgba(0, 0, 0, 0.281));
+        }
     }
 
     .ghost-section,
@@ -30,8 +57,11 @@
     .ghost-section {
         display: flex;
         justify-content: center;
-        align-items: center;
         height: 320px;
+    }
+
+    .register-section {
+        min-height: calc(100vh - 320px);
     }
 
     .register-container {
