@@ -376,3 +376,15 @@ header {
 .msg i {
     font-size: 20px;
 }
+
+.hamburger-popup {
+    background-color: var(--main--orange);
+}
+
+.hamburger-popup nav ul li a {
+    color: var(--spooky--black);
+}
+
+.hamburger-popup nav ul li:hover, .hamburger-popup nav ul li:hover a {
+    color: var(--ghostly--white);
+}
