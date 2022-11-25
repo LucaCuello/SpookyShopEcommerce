@@ -134,6 +134,11 @@ header {
     font-size: var(--medium);
 }
 
+#filter-categories-form label,
+#filter-color-form label {
+    cursor: pointer;
+}
+
 .color-filter,
 .genre-filter {
     height: auto;
@@ -204,6 +209,7 @@ header {
 
 .clear-filters {
     display: none;
+    opacity: 0;
     justify-content: center;
     align-items: center;
     width: max-content;

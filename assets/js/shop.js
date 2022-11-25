@@ -5,6 +5,7 @@ const colorFilterContainer = document.querySelector(".color-filter"),
   genreFilterContainer = document.querySelector(".genre-filter"),
   genreFilterTitle = document.querySelector(".genre-filter h4"),
   colorForm = document.getElementById("filter-color-form"),
+  categoriesForm = document.getElementById("filter-categories-form"),
   productsContainer = document.querySelector(".shop-products"),
   clearFilters = document.querySelector(".clear-filters");
 
@@ -85,11 +86,15 @@ const renderCard = (products) => {
 
 // Filtering
 
-const filterShopByColor = async (products) => {
-  let orange = document.getElementById("orange-cb"),
-    black = document.getElementById("black-cb"),
-    pink = document.getElementById("pink-cb");
+// Input options
 
+const orange = document.getElementById("orange-cb"),
+  black = document.getElementById("black-cb"),
+  pink = document.getElementById("pink-cb"),
+  sale = document.getElementById("discount-cb"),
+  newCollection = document.getElementById("new-cb");
+
+const filterShopByColor = async (products) => {
   let product = await products;
 
   if (orange.checked) {
@@ -113,12 +118,39 @@ const filterShopByColor = async (products) => {
   }
 };
 
+const filterByCategories = async (products) => {
+  let product = await products;
+
+  if (sale.checked) {
+    let card = product
+      .filter((item) => item.type === "Sale")
+      .map((item) => renderCard(item))
+      .join("");
+    productsContainer.innerHTML = card;
+  } else if (newCollection.checked) {
+    let card = product
+      .filter((item) => item.type === "New")
+      .map((item) => renderCard(item))
+      .join("");
+    productsContainer.innerHTML = card;
+  }
+};
+
 const showClearFiltersButton = () => {
   clearFilters.style.display = "flex";
+  setTimeout(() => {
+    clearFilters.style.opacity = "1";
+  }, 100);
 };
 
 const hideClearFiltersButton = () => {
+  clearFilters.style.opacity = "0";
   clearFilters.style.display = "none";
+};
+
+const clearFormChecks = () => {
+  colorForm.reset();
+  categoriesForm.reset();
 };
 
 // Cart
@@ -194,16 +226,21 @@ const addToCart = (e) => {
 };
 
 const init = () => {
-  filterDropdowns();
   fetchproducts();
+  filterDropdowns();
   // productsContainer.addEventListener("click", addToCart);
   colorForm.addEventListener("change", () => {
     filterShopByColor(fetchproducts());
     showClearFiltersButton();
   });
+  categoriesForm.addEventListener("change", () => {
+    filterByCategories(fetchproducts());
+    showClearFiltersButton();
+  });
   clearFilters.addEventListener("click", () => {
-    renderShop(fetchproducts());
     hideClearFiltersButton();
+    clearFormChecks();
+    renderShop(fetchproducts());
   });
 };
 
