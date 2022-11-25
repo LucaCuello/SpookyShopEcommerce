@@ -52,7 +52,7 @@ const renderShop = (products) => {
 
 const renderCard = (products) => {
   let { title, image, price, color } = products;
-  return `<div class="products-card" data-name="hola">
+  return `<div class="products-card">
   <div class="title">
       <h5>${title}</h5>
   </div>

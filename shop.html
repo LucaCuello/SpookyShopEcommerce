@@ -7,11 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop | SpookyShop</title>
     <link rel="stylesheet" href="assets/css/shop.css" />
+    <link rel="stylesheet" href="assets/css/responsive-main-shop.css">
     <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Hamburger popup -->
+    <div class="hamburger-popup">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#collection">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Collections
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#aboutus">
+                        <i class="fa-solid fa-angle-right"></i>
+                        About us
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#contact">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="register.html">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Register
+                    </a></li>
+                <li><a href="login.html">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        Login
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Hamburger popup -->
     <div class="shop-section section">
         <div class="login" id="login">
             <span class="user-tab u-register">
@@ -28,6 +73,18 @@
             </span>
         </div>
         <header>
+            <!-- Hamburger menu -->
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Hamburger menu -->
+            <!-- Mobile icon -->
+            <a href="index.html">
+                <img src="assets/img/ico.png" class="mobile-icon" alt="Icon of the website">
+            </a>
+            <!-- Mobile icon -->
             <div class="title-container">
                 <span class="title"> SpookyShop </span>
                 <i class="fa-solid fa-ghost" title="Don't click me"></i>
@@ -42,6 +99,9 @@
                     </ul>
                 </nav>
             </div>
+            <!-- Cellphone cart -->
+            <i class="fa-solid fa-cart-shopping mobile-cart" id="mobile-cart"></i>
+            <!-- Cellphone cart -->
         </header>
         <div class="banner">
             <div class="banner-body">
@@ -88,8 +148,8 @@
         </div>
         <div class="msg">
         </div>
-        <script src="assets/js/shop.js">
-        </script>
+        <script src="assets/js/hamburger.js"></script>
+        <script src="assets/js/shop.js"></script>
 </body>
 
 </html>
