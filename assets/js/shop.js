@@ -3,7 +3,10 @@
 const colorFilterContainer = document.querySelector(".color-filter"),
   colorFilterTitle = document.querySelector(".color-filter h4"),
   genreFilterContainer = document.querySelector(".genre-filter"),
-  genreFilterTitle = document.querySelector(".genre-filter h4");
+  genreFilterTitle = document.querySelector(".genre-filter h4"),
+  colorForm = document.getElementById("filter-color-form"),
+  productsContainer = document.querySelector(".shop-products"),
+  clearFilters = document.querySelector(".clear-filters");
 
 const dropdown = (container, title) => {
   title.addEventListener("click", () => {
@@ -33,20 +36,20 @@ const filterDropdowns = () => {
 
 // Fetching local json
 
-const productsContainer = document.querySelector(".shop-products");
-
 const fetchproducts = async () => {
   try {
     let getProducts = fetch("assets/json/data.json"),
       products = await (await getProducts).json();
     renderShop(products);
+    return products;
   } catch (err) {
     console.log(err);
   }
 };
 
-const renderShop = (products) => {
-  let card = products.map((item) => renderCard(item)).join("");
+const renderShop = async (products) => {
+  let product = await products;
+  let card = product.map((item) => renderCard(item)).join("");
   productsContainer.innerHTML = card;
 };
 
@@ -78,6 +81,44 @@ const renderCard = (products) => {
   </div>
 </div>
   `;
+};
+
+// Filtering
+
+const filterShopByColor = async (products) => {
+  let orange = document.getElementById("orange-cb"),
+    black = document.getElementById("black-cb"),
+    pink = document.getElementById("pink-cb");
+
+  let product = await products;
+
+  if (orange.checked) {
+    let card = product
+      .filter((item) => item.color === "Orange")
+      .map((item) => renderCard(item))
+      .join("");
+    productsContainer.innerHTML = card;
+  } else if (black.checked) {
+    let card = product
+      .filter((item) => item.color === "Black")
+      .map((item) => renderCard(item))
+      .join("");
+    productsContainer.innerHTML = card;
+  } else if (pink.checked) {
+    let card = product
+      .filter((item) => item.color === "Pink")
+      .map((item) => renderCard(item))
+      .join("");
+    productsContainer.innerHTML = card;
+  }
+};
+
+const showClearFiltersButton = () => {
+  clearFilters.style.display = "flex";
+};
+
+const hideClearFiltersButton = () => {
+  clearFilters.style.display = "none";
 };
 
 // Cart
@@ -155,8 +196,15 @@ const addToCart = (e) => {
 const init = () => {
   filterDropdowns();
   fetchproducts();
-  productsContainer.addEventListener("click", addToCart);
-  // getCartData();
+  // productsContainer.addEventListener("click", addToCart);
+  colorForm.addEventListener("change", () => {
+    filterShopByColor(fetchproducts());
+    showClearFiltersButton();
+  });
+  clearFilters.addEventListener("click", () => {
+    renderShop(fetchproducts());
+    hideClearFiltersButton();
+  });
 };
 
 init();

@@ -116,6 +116,8 @@ header {
     padding-bottom: 40px;
 }
 
+/* Filter styling */
+
 .shop-filters {
     display: flex;
     flex-direction: column;
@@ -199,6 +201,30 @@ header {
     opacity: 0;
     transition: all 300ms ease-in;
 }
+
+.clear-filters {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    cursor: pointer;
+    color: var(--spooky--black);
+    background-color: #db8d82;
+    gap: 5px;
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: all 300ms ease-in-out;
+}
+
+.clear-filters:hover {
+    background-color: #d17367;
+    transition: all 300ms ease-in-out;
+}
+
+
+/* Products styling */
 
 .shop-products {
     display: flex;
@@ -356,6 +382,8 @@ header {
     transition: transform 200ms ease-in-out;
 }
 
+/* Cart msg styling */
+
 .msg {
     position: fixed;
     display: flex;
@@ -376,6 +404,8 @@ header {
 .msg i {
     font-size: 20px;
 }
+
+/* Hamburger & Login/Register styling */
 
 .hamburger-popup {
     background-color: var(--main--orange);
