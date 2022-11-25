@@ -1,6 +1,7 @@
 /* Spider */
 
 .spider {
+    display: none;
     position: absolute;
     top: 0;
     left: 120px;

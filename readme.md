@@ -7,6 +7,6 @@ Features such as form validation, creation of users using localStorage, function
 
 [🔸Deploy](https://spookyshop.vercel.app/).
 
-<img src="https://iili.io/H3ATgYg.png" alt="preview" border="0">
+<img src="https://iili.io/HF7fVQs.png" alt="preview" border="0">
 
 _All ghost assets belongs to Canva Pro_
