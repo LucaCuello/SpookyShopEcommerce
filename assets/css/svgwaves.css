@@ -87,3 +87,10 @@
 .footer-wave .shape-fill {
     fill: #181B3B;
 }
+
+.wave,
+.collection-wave,
+.about-us-wave,
+.footer-wave {
+    pointer-events: none;
+}

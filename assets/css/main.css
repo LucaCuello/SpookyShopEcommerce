@@ -1,9 +1,10 @@
 @import url("reset.css");
 @import url("var.css");
+@import url("hamburger.css");
+@import url("svgwaves.css");
 @import url("animations.css");
 @import url("extras.css");
-@import url("svgwaves.css");
-@import url("hamburger.css");
+@import url("scroll-reveal.css");
 
 body {
     display: flex;
@@ -65,16 +66,17 @@ body {
 
 .login,
 .user-dashboard {
-    position: absolute;
-    top: -20px;
-    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    color: var(--spooky--black);
+    top: -20px;
+    right: 0;
     border-bottom-left-radius: 50%;
     padding: 40px;
     gap: 10px;
-    color: var(--spooky--black);
+    z-index: 10;
 }
 
 .login span a,
