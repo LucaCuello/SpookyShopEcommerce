@@ -90,7 +90,6 @@ const init = () => {
     e.preventDefault();
     isUserValid(), isLoginPasswordValid();
     if (isUserValid() && isLoginPasswordValid()) {
-      console.log("watefac");
       formLoginMsgs("Valid username", userSpan, true),
         formLoginMsgs("Valid password", passwordLoginSpan, true),
         updateLocalStorageLoginState(usernameInput.value),

@@ -1,9 +1,10 @@
 const loginContainer = document.getElementById("login"),
-  heroContainer = document.getElementById("hero-container");
+  heroContainer = document.getElementById("main-page");
 
 const localStorageUserData = JSON.parse(localStorage.getItem("User")) || [];
 
 const renderDashboard = (user) => {
+  let hamburgerUserDashboard = document.querySelector(".hamburger-usertab");
   let userDashboard = document.createElement("div");
   userDashboard.classList.add("user-dashboard");
   userDashboard.innerHTML = `
@@ -26,9 +27,24 @@ const renderDashboard = (user) => {
     <i class="fa-solid fa-cart-shopping" id="cart"></i>
   </span>
   `;
+  hamburgerUserDashboard.innerHTML = `
+  <ul>
+  <li><a href="#">
+        <i class="fa-solid fa-user"></i>
+          ${user.user}
+      </a></li>
+  <li><a href="#" id="logout-hamburger">
+        <i class="fa-solid fa-door-open"></i>
+          Logout
+      </a></li>
+</ul>
+  `;
   heroContainer.appendChild(userDashboard);
   document.getElementById("logout").addEventListener("click", () => {
     logOut(userDashboard, user);
+  });
+  document.getElementById("logout-hamburger").addEventListener("click", () => {
+    logOut(hamburgerUserDashboard, user);
   });
 };
 
@@ -55,16 +71,17 @@ const isAccountLogged = () => {
 isAccountLogged();
 
 const redirection = (button) => {
-  button.addEventListener("click", () => {
-    document.location.href = "shop.html";
-  });
+  if (button) {
+    button.addEventListener("click", () => {
+      document.location.href = "shop.html";
+    });
+  }
 };
 
 const initRedirection = () => {
   let shirtsShopButton = document.getElementById("shirts-shop-btn"),
     hoodiesShopButton = document.getElementById("hoodies-shop-btn"),
     mugsShopButton = document.getElementById("mugs-shop-btn");
-
   redirection(shirtsShopButton);
 };
 

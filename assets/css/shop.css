@@ -388,3 +388,11 @@ header {
 .hamburger-popup nav ul li:hover, .hamburger-popup nav ul li:hover a {
     color: var(--ghostly--white);
 }
+
+.user-dashboard span a {
+    color: var(--secondary--white);
+}
+
+.user-dashboard span i {
+    color: var(--ghostly--white);
+}
