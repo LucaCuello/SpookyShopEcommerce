@@ -372,7 +372,7 @@ main {
 .collection-card::before {
     content: "";
     position: absolute;
-    background-image: url(../img/shirts.png);
+    background-image: url(../img/shirts.webp);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -382,11 +382,11 @@ main {
 }
 
 .collection-card:nth-of-type(2)::before {
-    background-image: url(../img/hoodies.png);
+    background-image: url(../img/hoodies.webp);
 }
 
 .collection-card:nth-of-type(3)::before {
-    background-image: url(../img/coffemug.png);
+    background-image: url(../img/coffemug.webp);
 }
 
 .collection-card-body {
@@ -794,4 +794,18 @@ footer {
     cursor: pointer;
     font-size: 30px;
     color: var(--ghostly--white);
+}
+
+
+/* Accessibility */
+
+.go-up-button,
+.home-link,
+.github-link,
+.linkedin-link {
+    font-size: 0;
+}
+
+.go-up-button i {
+    font-size: 18px;
 }
