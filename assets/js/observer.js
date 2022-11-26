@@ -9,12 +9,23 @@ const observer = new IntersectionObserver((entries, observer) => {
     if (!entry.isIntersecting) {
       return;
     }
-    console.log(entry.target);
     entry.target.classList.add("scroll-reveal-on");
     observer.unobserve(entry.target);
   });
 }, options);
 
-sections.forEach((section) => {
-  observer.observe(section);
-});
+// Making sure that the opacity animation from the intersection observer starts right away if the loader has already been shown. Otherwise, it'll start after the loader finishes.
+
+if (sessionStorage.getItem("loaderShownOnMainPage")) {
+  setTimeout(() => {
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }, 900);
+} else {
+  setTimeout(() => {
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }, 2600);
+}

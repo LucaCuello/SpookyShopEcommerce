@@ -1,5 +1,6 @@
 @import url("reset.css");
 @import url("var.css");
+@import url("loader.css");
 @import url("hamburger.css");
 @import url("svgwaves.css");
 @import url("animations.css");
@@ -37,7 +38,7 @@ body {
 
 /* Go up button */
 
-.up-btn {
+.go-up-button {
     display: flex;
     justify-content: center;
     align-items: center;

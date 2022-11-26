@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SpookyShop ecommerce page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpookyShop</title>
     <link rel="stylesheet" href="assets/css/main.css">
@@ -13,8 +14,15 @@
 </head>
 
 <body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <span>SpookyShop</span>
+        <span>Loading...</span>
+        <span class="loader"></span>
+    </div>
+    <!-- Loader -->
     <!-- Up button -->
-    <a href="#main-page" class="up-btn">
+    <a href="#main-page" class="go-up-button">
         <i class="fa-solid fa-up-long"></i>
     </a>
     <!-- Hamburger popup -->
@@ -301,7 +309,7 @@
             </svg>
         </div>
     </footer>
-
+    <script src="assets/js/main-page-loader.js" type="module"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/hamburger.js"></script>
     <script src="assets/js/extras.js"></script>

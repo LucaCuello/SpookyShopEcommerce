@@ -432,3 +432,13 @@ header {
 .user-dashboard span i {
     color: var(--ghostly--white);
 }
+
+/* Loader styling */
+
+.loader-container {
+    background-color: var(--light-pink);
+}
+
+.loader {
+    border-top: 4px solid var(--main--orange);
+}
