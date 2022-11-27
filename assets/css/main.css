@@ -1,11 +1,10 @@
 @import url("reset.css");
 @import url("var.css");
 @import url("loader.css");
+@import url("scroll-reveal.css");
 @import url("hamburger.css");
 @import url("svgwaves.css");
 @import url("animations.css");
-@import url("extras.css");
-@import url("scroll-reveal.css");
 
 body {
     display: flex;
@@ -53,6 +52,39 @@ body {
     transition: transform 100ms ease-in-out;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
     animation: button 800ms ease-in-out infinite;
+}
+
+/* Ghosts */
+
+.main-ghost {
+    position: absolute;
+    width: 43%;
+    bottom: -10px;
+    right: -200px;
+    filter: drop-shadow(-10px 23px 15px #181b3b4b);
+}
+
+.pink-ghost {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    bottom: -120px;
+    filter: drop-shadow(-10px 23px 15px #181b3b4b);
+}
+
+.fa-ghost {
+    cursor: pointer;
+    z-index: 0;
+    color: var(--spooky--black);
+    position: absolute;
+    font-size: 20px;
+    top: -8px;
+    left: 132px;
+    transition: opacity 400ms ease-in;
+}
+
+.ghost-animation {
+    animation: ghost-move 1s linear forwards;
 }
 
 /* Hero section styles */

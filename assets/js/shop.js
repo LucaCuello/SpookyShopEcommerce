@@ -60,7 +60,7 @@ const renderCard = (products) => {
   <div class="title">
       <h5>${title}</h5>
   </div>
-  <img src="${image}">
+  <img src="${image}" alt="product image">
   <span class="products-price">
       $${price}
   </span>
