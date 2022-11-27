@@ -5,6 +5,7 @@
 @import url("hamburger.css");
 @import url("svgwaves.css");
 @import url("animations.css");
+@import url("cart.css");
 
 body {
     display: flex;
@@ -12,6 +13,7 @@ body {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /* Global section & container section styles  */
@@ -109,7 +111,7 @@ body {
     border-bottom-left-radius: 50%;
     padding: 40px;
     gap: 10px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .login span a,

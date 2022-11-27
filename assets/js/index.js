@@ -1,5 +1,8 @@
 const loginContainer = document.getElementById("login"),
-  heroContainer = document.getElementById("main-page");
+  heroContainer = document.getElementById("main-page"),
+  shirtsShopButton = document.getElementById("shirts-shop-btn"),
+  hoodiesShopButton = document.getElementById("hoodies-shop-btn"),
+  mugsShopButton = document.getElementById("mugs-shop-btn");
 
 const localStorageUserData = JSON.parse(localStorage.getItem("User")) || [];
 
@@ -68,9 +71,7 @@ const isAccountLogged = () => {
   }
 };
 
-isAccountLogged();
-
-const redirection = (button) => {
+const shopRedirection = (button) => {
   if (button) {
     button.addEventListener("click", () => {
       document.location.href = "shop.html";
@@ -78,11 +79,9 @@ const redirection = (button) => {
   }
 };
 
-const initRedirection = () => {
-  let shirtsShopButton = document.getElementById("shirts-shop-btn"),
-    hoodiesShopButton = document.getElementById("hoodies-shop-btn"),
-    mugsShopButton = document.getElementById("mugs-shop-btn");
-  redirection(shirtsShopButton);
+const initIndex = () => {
+  isAccountLogged();
+  shopRedirection(shirtsShopButton);
 };
 
-initRedirection();
+initIndex();

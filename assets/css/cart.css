@@ -1,0 +1,88 @@
+.login {
+    z-index: 20;
+}
+
+.mobile-cart {
+    z-index: 20;
+}
+
+.cart-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    background-color: var(--light-pink);
+    transform: translateY(-100vh) translateY(-64px);
+    height: calc(100% - 64px);
+    border-top-left-radius: 50px;
+    padding: 30px;
+    opacity: 0;
+    width: 30%;
+    right: 0;
+    top: 64px;
+    z-index: 20;
+    transition: all 300ms ease-in-out;
+}
+
+.cart-popup-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.cart-popup h2 {
+    /* padding-top: 20px; */
+    color: var(--spooky--black);
+    font-size: var(--medium);
+}
+
+.cart-popup p {
+    color: var(--light-spooky--black);
+    font-size: var(--normal-text);
+}
+
+.divider {
+    width: 90%;
+    background-color: var(--main--orange);
+    height: 3px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--spooky--black);
+    gap: 10px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.cart-popup button {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 5px;
+    font-weight: 600;
+    padding: 10px 65px;
+    transition: all 200ms ease-in-out;
+}
+
+.btn-active {
+    background-color: var(--main--orange);
+    color: var(--ghostly--white);
+}
+
+.btn-active:hover {
+    background-color: var(--spooky--black);
+    transform: scale(1.03);
+    transition: all 200ms ease-in-out;
+}
+
+.btn-disabled {
+    cursor: not-allowed;
+    background-color: grey;
+    color: rgb(196, 196, 196);
+}

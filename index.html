@@ -64,9 +64,17 @@
         </nav>
     </div>
     <!-- Hamburger popup -->
-    <!-- Overlay -->
-    <div class="overlay"></div>
-    <!-- overlay -->
+    <!-- Cart popup -->
+    <div class="cart-popup">
+        <h2>Your order</h2>
+        <p>Your cart is empty</p>
+        <div class="divider"></div>
+        <div class="total">
+            <span>Total:</span> <span>$0</span>
+        </div>
+        <button class="btn-active btn-disabled">Buy</button>
+    </div>
+    <!-- Cart popup -->
     <section class="hero-section section" id="main-page">
         <div class="login" id="login">
             <span class="user-tab u-register">
@@ -85,11 +93,14 @@
                 </a>
             </span>
             <span class="cart">
-                <i class="fa-solid fa-cart-shopping" id="cart"></i>
+                <i class="fa-solid fa-cart-shopping desktop-cart" id="cart"></i>
             </span>
         </div>
         <div class="hero-section--container section-container scroll-reveal-off">
             <header>
+                <!-- Overlay -->
+                <div class="overlay"></div>
+                <!-- overlay -->
                 <!-- Hamburger menu -->
                 <div class="hamburger">
                     <div></div>
@@ -316,7 +327,7 @@
     <script src="assets/js/main-page-loader.js" type="module"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/hamburger.js"></script>
-    <script src="assets/js/extras.js"></script>
+    <script src="assets/js/cart.js"></script>
     <script src="assets/js/observer.js"></script>
 </body>
 

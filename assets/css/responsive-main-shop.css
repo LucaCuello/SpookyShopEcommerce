@@ -1,7 +1,7 @@
 @media screen and (max-width: 1250px) {
 
-    .spider {
-        display: none;
+    .cart-popup {
+        width: 40%;
     }
 
     .main-ghost {
@@ -39,6 +39,9 @@
 
 
 @media screen and (max-width: 1000px) {
+    .cart-popup {
+        width: 60%;
+    }
 
     .collection-section--container {
         height: auto;
@@ -46,7 +49,6 @@
 
     .cards-container {
         flex-wrap: wrap;
-        /* gap: 20px; */
     }
 
     .pink-ghost {
@@ -67,7 +69,8 @@
         --normal-text: 20px;
     }
 
-    .hamburger-popup {
+    .hamburger-popup,
+    .cart-popup {
         width: 80%;
     }
 
