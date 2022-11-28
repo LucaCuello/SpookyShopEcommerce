@@ -366,6 +366,7 @@ main {
 }
 
 .card-body h2 {
+    pointer-events: none;
     color: var(--ghostly--white);
 }
 
@@ -619,8 +620,10 @@ main {
 }
 
 .contact-section--container form textarea {
+    padding: 10px;
     min-height: 150px;
 }
+
 
 .contact-section--container form input {
     padding: 10px;
@@ -720,6 +723,10 @@ footer {
     color: #00acee;
 }
 
+.ig-gradient:hover i {
+    color: var(--ghostly--white);
+}
+
 .ig-gradient:hover::before {
     opacity: 1;
 }
@@ -803,7 +810,7 @@ footer {
 }
 
 .footer-contact-network a:nth-child(2) {
-    color: var(--ghostly--white);
+    color: var(--spooky--black);
 }
 
 .footer-contact span {

@@ -260,6 +260,7 @@ const finishOrder = () => {
     } else if (confirm("Do you want to buy now?")) {
       alert("Thanks for trusting us! :)");
       cartInfo = [];
+      renderTotal();
       saveToLocalStorage([]);
       renderCart([]);
       renderEmptyCartMsg([]);
