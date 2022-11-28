@@ -12,13 +12,12 @@ const openCart = () => {
 };
 
 const blurHamburgerMenu = () => {
-  let hamburgerIcon = document.querySelector(".hamburger");
-  if (!hamburgerIcon) {
+  if (!hamburgerContainer) {
     return;
   }
   desktopCartIcon.style.zIndex = "20";
   mobileCartIcon.style.zIndex = "20";
-  hamburgerIcon.style.zIndex = "14";
+  hamburgerContainer.style.zIndex = "14";
 };
 
 const closeOnScroll = () => {

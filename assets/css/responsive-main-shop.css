@@ -123,6 +123,19 @@
     .fa-ghost {
         left: 98px;
     }
+
+    .cart-popup {
+        width: 100%;
+    }
+
+    .cart-items-card {
+        width: 100%;
+        gap: 7px;
+    }
+
+    .cart-item-info p {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 425px) {

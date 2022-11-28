@@ -134,7 +134,7 @@ body {
 .cart::before {
     content: "2";
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-weight: bold;
@@ -156,7 +156,6 @@ header {
     text-align: center;
     align-items: center;
     padding-top: 15px;
-    gap: 5px;
 }
 
 .mobile-icon {

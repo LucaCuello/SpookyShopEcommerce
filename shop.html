@@ -68,12 +68,15 @@
     <!-- Cart popup -->
     <div class="cart-popup">
         <h2>Your order</h2>
-        <p>Your cart is empty</p>
+        <p class="empty-msg">Your cart is empty</p>
+        <div class="cart-items-card-container">
+        </div>
         <div class="divider"></div>
         <div class="total">
-            <span>Total:</span> <span>$0</span>
+            <span>Total:</span><span class="cart-total">$0</span>
         </div>
-        <button class="btn-active btn-disabled">Buy</button>
+        <button type="button" class="cart-btn">Buy</button>
+        <button type="button" class="cart-btn clear-cart">Clear cart</button>
     </div>
     <!-- Cart popup -->
     <!-- Overlay -->

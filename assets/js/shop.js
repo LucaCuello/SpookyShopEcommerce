@@ -1,4 +1,4 @@
-// Filter dropdowns
+// *¨Filter dropdowns
 
 const colorFilterContainer = document.querySelector(".color-filter"),
   colorFilterTitle = document.querySelector(".color-filter h4"),
@@ -35,7 +35,7 @@ const filterDropdowns = () => {
   dropdown(genreFilterContainer, genreFilterTitle);
 };
 
-// Fetching local json
+// * Fetching local json
 
 const fetchproducts = async () => {
   try {
@@ -60,7 +60,7 @@ const renderCard = (products) => {
   <div class="title">
       <h5>${title}</h5>
   </div>
-  <img src="${image}" alt="product image">
+  <img src="${image}" alt="product image" draggable="false">
   <span class="products-price">
       $${price}
   </span>
@@ -84,7 +84,7 @@ const renderCard = (products) => {
   `;
 };
 
-// Filtering
+// * Filtering
 
 // Input options
 
@@ -153,7 +153,132 @@ const clearFormChecks = () => {
   categoriesForm.reset();
 };
 
-// Cart
+// Adding product to cart
+
+let cartInfo = JSON.parse(localStorage.getItem("cart")) || [],
+  cartBuyButton = document.querySelector(".cart-btn");
+
+const saveToLocalStorage = (cartList) => {
+  localStorage.setItem("cart", JSON.stringify(cartList));
+};
+
+const getItemData = (name, price, image, color, size) => {
+  return { name, price, image, color, size };
+};
+
+const createShopItem = (item) => {
+  cartInfo = [...cartInfo, item];
+};
+
+const renderCartCard = (item) => {
+  let { name, price, image, color, size } = item;
+  return `
+<div class="cart-items-card">
+  <img src="${image}" alt="cart item preview" draggable="false">
+  <div class="cart-item-info">
+    <h4>${name} shirt</h4>
+    <h5>${color}</h5>
+    <h6>${size}</h6>
+    <p class="cart-item-price">Price: $${price}</p>
+  </div>
+</div>
+  `;
+};
+
+const renderCart = (cartList) => {
+  let containter = document.querySelector(".cart-items-card-container");
+  let cartCard = cartList.map((item) => renderCartCard(item)).join("");
+  containter.innerHTML = cartCard;
+};
+
+const renderEmptyCartMsg = (cart) => {
+  let msg = document.querySelector(".empty-msg");
+  if (!cart.length) {
+    return (msg.style.display = "block");
+  }
+  msg.style.display = "none";
+};
+
+const addProductToCart = () => {
+  document.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("products-cart")) {
+      return;
+    }
+    let order = e.target.dataset,
+      size = e.target.parentElement.children[3].children[0].value;
+    let { name, price, image, color } = order;
+    let shopItemData = getItemData(name, price, image, color, size);
+    if (size === "Choose a size") {
+      return renderMsg(false, "Please, select a shirt size");
+    } else {
+      renderMsg(
+        true,
+        `${shopItemData.name} ${shopItemData.color} shirt has been added to your cart`
+      );
+      createShopItem(shopItemData);
+      saveToLocalStorage(cartInfo);
+      renderCart(cartInfo);
+      renderTotal();
+      renderEmptyCartMsg(cartInfo);
+      manageButtons(cartBuyButton);
+    }
+  });
+};
+
+const manageButtons = (button) => {
+  let clearCart = document.querySelector(".clear-cart");
+  if (!cartInfo.length) {
+    clearCart.style.display = "none";
+    button.classList.add("btn-disabled");
+    button.classList.remove("btn-active");
+    return;
+  }
+  clearCart.style.display = "block";
+  button.classList.remove("btn-disabled");
+  button.classList.add("btn-active");
+};
+
+const clearCart = () => {
+  let cartPopup = document.querySelector(".cart-popup");
+  cartPopup.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("clear-cart")) {
+      return;
+    }
+    cartInfo = [];
+    saveToLocalStorage([]);
+    renderCart([]);
+    renderTotal();
+    renderEmptyCartMsg([]);
+    manageButtons(cartBuyButton);
+  });
+};
+
+const finishOrder = () => {
+  cartPopup.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("btn-active")) {
+      return;
+    } else if (confirm("Do you want to buy now?")) {
+      alert("Thanks for trusting us! :)");
+      cartInfo = [];
+      saveToLocalStorage([]);
+      renderCart([]);
+      renderEmptyCartMsg([]);
+    }
+  });
+};
+
+const getCartTotal = () => {
+  return cartInfo.reduce((prevVal, currentVal) => {
+    return prevVal + Number(currentVal.price);
+  }, 0);
+};
+
+const renderTotal = () => {
+  let total = document.querySelector(".cart-total");
+  total.innerHTML = `
+  $ ${getCartTotal().toFixed(2)}
+  `;
+};
 
 const renderMsg = (valid = false, msg = "") => {
   let message = document.querySelector(".msg");
@@ -178,57 +303,9 @@ const renderMsg = (valid = false, msg = "") => {
   }
 };
 
-// const saveToLocalStorage = (objectInfo) => {
-//   console.log(localStorageCart);
-//   console.log(objectInfo);
-//   localStorage.setItem("Cart", JSON.stringify(objectInfo));
-// };
-
-// const getCartData = () => {
-//   document.addEventListener("click", (e) => {
-//     if (e.target.classList.contains("products-cart")) {
-//       let order = e.target.dataset,
-//         size = e.target.parentElement.children[3].children[0].value;
-//       if (size === "Choose a size") {
-//         renderMsg(false, "Please, select a size");
-//       } else {
-//         renderMsg(
-//           true,
-//           `${order.name} (${order.color}) has been added to your cart`
-//         );
-//         let orderInfo = [
-//           ...localStorageCart,
-//           {
-//             id: localStorageCart.length + 1,
-//             title: order.name,
-//             price: order.price,
-//             image: order.image,
-//             size: size,
-//           },
-//         ];
-//       }
-//     } else return;
-//   });
-// };
-
-let localStorageCart = JSON.parse(localStorage.getItem("Cart")) || [];
-
-const createOrderData = (name, price, image, color) => {
-  return { name, price, image, color };
-};
-
-const addToCart = (e) => {
-  if (!e.target.classList.contains("products-cart")) return;
-  const { name, price, image, color } = e.target.dataset;
-  const product = createOrderData(name, price, image, color);
-  let arraytest = [...localStorageCart, product];
-  localStorage.setItem("Cart", JSON.stringify(arraytest));
-};
-
 const init = () => {
   fetchproducts();
   filterDropdowns();
-  // productsContainer.addEventListener("click", addToCart);
   colorForm.addEventListener("change", () => {
     filterShopByColor(fetchproducts());
     showClearFiltersButton();
@@ -242,6 +319,15 @@ const init = () => {
     clearFormChecks();
     renderShop(fetchproducts());
   });
+  addProductToCart();
+  document.addEventListener("DOMContentLoaded", () => {
+    renderEmptyCartMsg(cartInfo);
+    renderCart(cartInfo);
+    manageButtons(cartBuyButton);
+    renderTotal();
+  });
+  clearCart();
+  finishOrder();
 };
 
 init();

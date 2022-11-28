@@ -43,7 +43,6 @@ const closePopUpOnScroll = () => {
 
 const closeOnBlur = () => {
   document.addEventListener("click", (e) => {
-    console.log(e.target);
     if (e.target.classList.contains("overlay")) {
       overlay.classList.remove("overlay-active");
       hamburgerPopUp.classList.remove("popup-active");
